@@ -4,5 +4,322 @@ html {
 
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "georgia", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p, a {
+  font-size: .5rem;
+}
+
+header {
+  height: 4rem;
+  width: 100%;
+  background-color: white;
+}
+
+header .logoheader {
+  display: none;
+}
+
+.desktop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo img {
+  height: 2rem;
+  width: auto;
+}
+
+.navigation {
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navigation .stripe {
+  width: 1rem;
+  height: 4rem;
+  background-color: "aqua", sans-serif;
+}
+
+
+@media only screen and (max-width: 450px) {
+  header .textheader {
+    display: none;
+  }
+
+  header .logoheader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logoheader img {
+    height: 1.5rem;
+    width: auto;
+  }
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  background-color: lightgray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.banner .imagebanner {
+  width: 60%;
+  height: auto;
+  margin: 2rem 1.5rem;
+}
+
+.banner .textbanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textbanner h4 {
+  margin: 2rem 0;
+}
+
+.textbanner a  {
+  padding: .5rem 3rem;
+  background-color: darkgray;
+  color: white;
+  font-size: .5rem;
+}
+
+/*main section*/
+
+.main {
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+}
+
+.mainleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid lightgray;
+}
+
+.mainleft img {
+  width: 60%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.mainleft .lefttext {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainleft h2 {
+  margin-bottom: 1.5rem;
+}
+
+.mainright {
+  width: 40%;
+  height: auto;
+  padding: 1rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.mainright .mobile {
+  display: none;
+}
+
+@media only screen and (max-width:450px) {
+.mainright .desktop {
+  display: none;
+  }
+.mainright .mobile {
+  display: block;
+  }
+}
+
+
+
+.rightcontainer {
+  display: flex;
+  border-bottom: 2px solid lightgray;
+}
+
+.rightcontainer img {
+  width: 35%;
+  height: auto;
+  margin: 1rem;
+}
+
+.rightcontainer .righttext {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.rightcontainer .righttext a {
+  color: blue;
+}
+
+.mainright .special {
+  background-color: gray;
+  margin-bottom: 2rem;
+}
+
+.learning {
+  background-color: lightgray;
+  padding: 2rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.learning .row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.learningcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: auto;
+  background-color: white;
+  margin: 0 1rem;
+}
+
+.learningcontainer img {
+  width: 100%;
+  height: auto;
+}
+
+.row .learningtext {
+  padding: 1rem;
+}
+
+.mobileonly {
+  display: none
+}
+
+
+@media only screen and (max-width:450px) {
+  .mobileonly {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileonly h4 {
+    background-color: gray;
+    height: 3.5rem;
+    width: auto;
+    margin: .5rem 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    text-align: left;
+
+  }
+}
+
+
+.exhibit {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  padding: 2rem .5rem 2em 1.5rem;
+  align-items: center;
+}
+
+.exhibit .videocontainer {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.exhibit .videocontainer video {
+  margin-bottom: 1.5rem;
+}
+
+.exhibit .videocontainer h4 {
+  margin-bottom: .5rem;
+}
+
+.exhibitright {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.exhibitright .special {
+  background-color: gray;
+}
+
+.rightcontainer img {
+  width: 35%;
+  height: auto;
+}
+
+
+
+.exhibittext {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+
+
+
+footer {
+  height: 4rem;
+  width: 100%;
+  background-color: white;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid lightgray;
 }
