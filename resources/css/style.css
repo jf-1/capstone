@@ -1,10 +1,11 @@
 html {
   font-size: 16px;
+  font-family: Helvetica, sans-serif;
 }
 
-
+/*
 body {
-  font-family: "georgia", sans-serif;
+
 }
 
 h1 {
@@ -13,17 +14,26 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-family: arial;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-family: Helvetica, sans-serif;
+  font-size: 3rem;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 p, a {
-  font-size: .5rem;
+  font-size: 2rem;
+  color: black;
 }
+*/
 
 header {
   height: 4rem;
@@ -35,9 +45,10 @@ header .logoheader {
   display: none;
 }
 
-.desktop {
+.textheader {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -46,6 +57,15 @@ header .logoheader {
   justify-content: flex-start;
   align-items: center;
 }
+
+.logo h3 strong {
+  font-weight: 900;
+}
+
+.logo h3 {
+  font-weight: 100;
+}
+
 
 .logo img {
   height: 2rem;
@@ -62,27 +82,38 @@ header .logoheader {
 .navigation .stripe {
   width: 1rem;
   height: 4rem;
-  background-color: "aqua", sans-serif;
+  background-color: aqua;
+}
+
+.navigation li a {
+  font-family: arial;
+  text-decoration: none;
 }
 
 
 @media only screen and (max-width: 450px) {
+  /*header {
+    display: flex;
+    align-items: bottom;
+  }*/
   header .textheader {
     display: none;
   }
 
   header .logoheader {
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 
   .logoheader img {
-    height: 1.5rem;
+    height: 1.75rem;
     width: auto;
   }
 }
 
+/*Section banner*/
 .banner {
   width: 100%;
   height: auto;
@@ -92,49 +123,97 @@ header .logoheader {
   align-items: center;
 }
 
-
-.banner .imagebanner {
+.banner img /*.imagebanner*/ {
   width: 60%;
   height: auto;
   margin: 2rem 1.5rem;
 }
 
+.banner .imagebanner img {
+  width: 100%;
+  height: 100%;
+}
+
 .banner .textbanner {
+  margin-left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 24rem;
+  height: auto;
 }
 
-.textbanner h4 {
+.banner .textbanner h1 {
+  font-family: helvetica;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.banner .textbanner h4 {
+  font-family: helvetica;
+  font-size: 1.5rem;
+  font-weight: bold;
   margin: 2rem 0;
 }
 
-.textbanner a  {
-  padding: .5rem 3rem;
+.banner .textbanner a  {
+  padding-top: 1.2rem;
   background-color: darkgray;
   color: white;
-  font-size: .5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  width: 20rem;
+  height: 3rem;
+  text-align: center;
 }
+
+@media only screen and (max-width: 450px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner .imagebanner {
+    width: 100%;
+    margin-top: 0;
+  }
+  .banner .textbanner {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .banner .textbanner h1 {
+    font-size: 2rem;
+    width: 80%;
+  }
+
+  .banner .textbanner a {
+    width: 100%;
+  }
+}
+
 
 /*main section*/
 
 .main {
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: flex-end;
   background-color: white;
 }
 
 .mainleft {
+  width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: baseline;
   padding: 2rem 1.5rem;
   border-right: 1px solid lightgray;
 }
 
 .mainleft img {
-  width: 60%;
+  width: 100%;
   height: auto;
   margin-bottom: 2rem;
 }
@@ -146,60 +225,107 @@ header .logoheader {
 }
 
 .mainleft h2 {
+  font-family: arial;
+  font-size: 2rem;
+  font-weight: 800;
   margin-bottom: 1.5rem;
 }
+
+.mainleft p {
+  font-family: inherit;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mainleft h5 {
+  margin-bottom: 0;
+  font-family: arial;
+  font-size: 1rem;
+}
+
+
+
 
 .mainright {
   width: 40%;
   height: auto;
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
-
 }
-
-.mainright .mobile {
-  display: none;
-}
-
-@media only screen and (max-width:450px) {
-.mainright .desktop {
-  display: none;
-  }
-.mainright .mobile {
-  display: block;
-  }
-}
-
-
 
 .rightcontainer {
   display: flex;
+  justify-content: flex-start;
   border-bottom: 2px solid lightgray;
 }
 
-.rightcontainer img {
+.rightcontainer .desktop /*img*/ {
   width: 35%;
-  height: auto;
+  height: 90%;
   margin: 1rem;
 }
 
-.rightcontainer .righttext {
-  width: 65%;
+.rightcontainer .mobile {
+  display: none;
+}
+
+.graycontainer {
+  background-color: lightgray;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.graycontainer .desktop {
+  width: 35%;
+  height: 90%;
+  margin: 1rem;
+}
+
+.graycontainer .mobile {
+  display: none;
+}
+
+.mainright .righttext {
+  padding-left: .5rem;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
 }
 
-.rightcontainer .righttext a {
-  color: blue;
+.mainright h4 {
+  margin: 1rem 0 1rem 0;
+  font-size: 1.25rem;
+  font-family: arial;
+  font-weight: bold;
 }
 
-.mainright .special {
-  background-color: gray;
-  margin-bottom: 2rem;
+.mainright p {
+  font-size: .85rem;
+  font-family: helvetica;
 }
+
+.mainright a {
+  font-size: .85rem;
+  font-family: helvetica;
+  color: blue;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+
+@media only screen and (max-width:450px) {
+.mainright .desktop img {
+  display: none;
+  }
+.mainright .mobile img {
+  display: block;
+  }
+}
+
 
 .learning {
   background-color: lightgray;
@@ -210,19 +336,29 @@ header .logoheader {
   align-items: center;
 }
 
+.learning h2 {
+  font-family: arial;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 2rem 0;
+}
+
 .learning .row {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 2rem;
 }
 
 .learningcontainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
   width: 30%;
-  height: auto;
+  height: 22rem;
   background-color: white;
   margin: 0 1rem;
+  padding: 0 auto 1.5rem 3.5rem;
 }
 
 .learningcontainer img {
@@ -231,7 +367,27 @@ header .logoheader {
 }
 
 .row .learningtext {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.row h4 strong {
+  font-size: 1.25rem;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+}
+
+.row h4 {
+  margin: .5rem 0;
+}
+
+.row p {
+  line-height: 1.5rem;
 }
 
 .mobileonly {
