@@ -1,12 +1,16 @@
 html {
   font-size: 16px;
-  font-family: Helvetica, sans-serif;
+  font-family: "helvetica", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-/*
+
 body {
-
-}
+  max-width: 1500px;
+  }
 
 h1 {
   font-size: 2rem;
@@ -33,7 +37,7 @@ p, a {
   font-size: 2rem;
   color: black;
 }
-*/
+
 
 header {
   height: 4rem;
@@ -59,11 +63,15 @@ header .logoheader {
 }
 
 .logo h3 strong {
-  font-weight: 900;
+  font-family: helvetica, sans-serif;
+  font-weight: 600;
+  opacity: 1;
 }
 
 .logo h3 {
+  font-family: helvetica, sans-serif;
   font-weight: 100;
+  opacity: .6;
 }
 
 
@@ -92,10 +100,10 @@ header .logoheader {
 
 
 @media only screen and (max-width: 450px) {
-  /*header {
-    display: flex;
-    align-items: bottom;
-  }*/
+  html {
+    display: block;
+  }
+
   header .textheader {
     display: none;
   }
@@ -124,7 +132,7 @@ header .logoheader {
 }
 
 .banner img /*.imagebanner*/ {
-  width: 60%;
+  width: 58%;
   height: auto;
   margin: 2rem 1.5rem;
 }
@@ -157,13 +165,13 @@ header .logoheader {
 }
 
 .banner .textbanner a  {
-  padding-top: 1.2rem;
+  padding: .5rem 0;
   background-color: darkgray;
   color: white;
   font-size: 1.5rem;
   text-decoration: none;
   width: 20rem;
-  height: 3rem;
+  height: auto;
   text-align: center;
 }
 
@@ -172,10 +180,11 @@ header .logoheader {
     flex-direction: column;
     align-items: center;
   }
-  .banner .imagebanner {
+  .banner img {
     width: 100%;
     margin-top: 0;
   }
+
   .banner .textbanner {
     width: 90%;
     margin-bottom: 2rem;
@@ -246,10 +255,10 @@ header .logoheader {
 
 
 
-.mainright {
+.right {
   width: 40%;
   height: auto;
-  padding: 1rem 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
 }
@@ -257,13 +266,18 @@ header .logoheader {
 .rightcontainer {
   display: flex;
   justify-content: flex-start;
+  padding: 1rem;
   border-bottom: 2px solid lightgray;
 }
 
-.rightcontainer .desktop /*img*/ {
+#specialmargin {
+  margin-top: 1rem;
+}
+
+.rightcontainer .desktop {
   width: 35%;
   height: 90%;
-  margin: 1rem;
+  /*margin: 1rem;*/
 }
 
 .rightcontainer .mobile {
@@ -272,7 +286,7 @@ header .logoheader {
 
 .graycontainer {
   background-color: lightgray;
-  margin-bottom: 2rem;
+  padding: 1rem;
   display: flex;
   justify-content: flex-start;
 }
@@ -280,14 +294,14 @@ header .logoheader {
 .graycontainer .desktop {
   width: 35%;
   height: 90%;
-  margin: 1rem;
+  /*margin: 1rem;*/
 }
 
 .graycontainer .mobile {
   display: none;
 }
 
-.mainright .righttext {
+.right  .righttext {
   padding-left: .5rem;
   width: 60%;
   display: flex;
@@ -296,19 +310,19 @@ header .logoheader {
   align-items: baseline;
 }
 
-.mainright h4 {
+.right h4 {
   margin: 1rem 0 1rem 0;
   font-size: 1.25rem;
   font-family: arial;
   font-weight: bold;
 }
 
-.mainright p {
+.right p {
   font-size: .85rem;
   font-family: helvetica;
 }
 
-.mainright a {
+.right a {
   font-size: .85rem;
   font-family: helvetica;
   color: blue;
@@ -318,12 +332,43 @@ header .logoheader {
 
 
 @media only screen and (max-width:450px) {
-.mainright .desktop img {
+.mainleft {
   display: none;
-  }
-.mainright .mobile img {
+}
+
+.right .rightcontainer {
+  flex-direction: column;
+  align-items: baseline;
+  padding: 1rem;
+  border: 2px solid black;
+}
+
+.right .graycontainer {
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.right {
+  width: 100%;
+}
+
+.right .rightcontainer img, .right .graycontainer img {
+  width: 100%;
+  height: auto;
+}
+
+.right .desktop {
+  display: none;
+}
+.right .mobile {
   display: block;
   }
+.right .righttext {
+  width: 90%;
+}
+
+
+
 }
 
 
@@ -391,91 +436,185 @@ header .logoheader {
 }
 
 .mobileonly {
-  display: none
+  display: none;
 }
 
 
 @media only screen and (max-width:450px) {
+  .learning {
+    background-color: white;
+  }
+
+  .learning .row {
+    display:none;
+  }
+
   .mobileonly {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    padding: 1.5rem .5rem;
+    border: 4px solid black;
   }
 
-  .mobileonly h4 {
-    background-color: gray;
-    height: 3.5rem;
-    width: auto;
-    margin: .5rem 1rem;
-    padding: 1rem 1rem 1.5rem 1rem;
+  .mobileonly a {
+    font-family: arial;
+    font-size: 1.5rem;
+    font-weight: 600;
     text-align: left;
-
+    text-decoration: none;
+    background-color: lightgray;
+    height: 3rem;
+    width: 85%;
+    margin: .5rem 0;
+    padding: 1rem;
   }
 }
-
+  /*Exhibit Section*/
 
 .exhibit {
-  display: flex;
-  flex-direction: column;
   background-color: white;
   width: 100%;
   height: auto;
-  padding: 2rem .5rem 2em 1.5rem;
-  align-items: center;
+}
+
+
+.exhibit h2 {
+  font-family: arial;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 2rem 0;
+  height: auto;
+  width: auto;
+  text-align: center;
+  border: 1px solid black;
+}
+.exhibitcontainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+
 }
 
 .exhibit .videocontainer {
   width: 60%;
   height: auto;
+  margin: 0 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
+  border: 1px solid black;
 }
 
-.exhibit .videocontainer video {
+.videocontainer video {
+  width: 100%;
+  height: auto;
   margin-bottom: 1.5rem;
+  border: 1px solid black;
 }
 
-.exhibit .videocontainer h4 {
+.videocontainer h4 {
+  font-size: 1.25rem;
+  font-family: arial;
+  font-weight: bold;
   margin-bottom: .5rem;
+  border: 1px solid black;
 }
 
-.exhibitright {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.videocontainer p {
+  font-family: helvetica;
+  font-size: .85rem;
+  line-height: 1.2rem;
+  margin-bottom: 2rem;
+  border: 1px solid black;
 }
 
-.exhibitright .special {
-  background-color: gray;
+.videomobile {
+  display: none;
 }
 
-.rightcontainer img {
+@media only screen and (max-width:450px) {
+  .videocontainer video {
+    width: 100%;
+    height: auto;
+  }
+
+  .exhibitcontainer {
+    display: none;
+  }
+
+  .videomobile {
+    display: block;
+  }
+
+  .videomobile video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.rightcontainer, .graycontainer {
+  border: 1px solid black;
+}
+
+.rightcontainer img, .graycontainer img  {
   width: 35%;
   height: auto;
+  border: 1px solid black;
 }
 
-
-
 .exhibittext {
-  width: 65%;
+  width: 60%;
+  padding-left: .5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
 }
 
-
-
-
-footer {
-  height: 4rem;
-  width: 100%;
+.bottom {
+  height: 3.5rem;
+  width: auto;
   background-color: white;
   padding: 1rem 1.5rem;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   border-top: 1px solid lightgray;
+  border: 1px solid black;
+}
+
+.bottom p {
+  font-family: helvetica;
+  font-size: .85rem;
+
+  /*border: 1px solid black;*/
+}
+
+.bottom span a {
+  font-family: helvetica;
+  font-size: .85rem;
+  /*border: 1px solid black;*/
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .bottom {
+    height: 3rem;
+    padding: 0 1.5rem;
+  }
+  .bottom p {
+    margin: 1rem 0;
+  }
+  .bottom span {
+    display: none;
+  }
 }
