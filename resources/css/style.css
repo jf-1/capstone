@@ -25,7 +25,7 @@ h2 {
 
 h3 {
   font-family: Helvetica, sans-serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 h4 {
@@ -62,21 +62,19 @@ header .logoheader {
   align-items: center;
 }
 
-.logo h3 strong {
-  font-family: helvetica, sans-serif;
-  font-weight: 600;
-  opacity: 1;
-}
-
 .logo h3 {
   font-family: helvetica, sans-serif;
+  font-size: 1.25rem;
   font-weight: 100;
-  opacity: .6;
 }
 
+.logo h3 strong {
+  font-family: helvetica, sans-serif;
+  font-weight: 700;
+}
 
 .logo img {
-  height: 2rem;
+  height: 2.5rem;
   width: auto;
 }
 
@@ -99,7 +97,7 @@ header .logoheader {
 }
 
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 650px) {
   html {
     display: block;
   }
@@ -176,10 +174,10 @@ header .logoheader {
 }
 
 .banner .textbanner a:hover  {
-  background-color: #40e0d0;
+  background-color: #800080;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 760px) {
   .banner {
     flex-direction: column;
     align-items: center;
@@ -201,6 +199,7 @@ header .logoheader {
 
   .banner .textbanner a {
     width: 100%;
+    background-color: #808080; /*gray*/
   }
 }
 
@@ -213,7 +212,6 @@ header .logoheader {
   display: flex;
   justify-content: flex-end;
   background-color: white;
-  border: 2px solid black;
 }
 
 .mainleft {
@@ -272,17 +270,16 @@ header .logoheader {
   display: flex;
   justify-content: flex-start;
   padding: 1rem;
-  border-bottom: 2px solid #c0c0c0; /*silver*/
 }
 
 #specialmargin {
   margin-top: 1rem;
+  border-bottom: 2px solid #c0c0c0; /*silver*/
 }
 
 .rightcontainer .desktop {
   width: 35%;
   height: 90%;
-  /*margin: 1rem;*/
 }
 
 .rightcontainer .mobile {
@@ -335,8 +332,11 @@ header .logoheader {
   margin-top: 1rem;
 }
 
+.right a:hover {
+  color: #ff0000;
+}
 
-@media only screen and (max-width:450px) {
+@media only screen and (max-width:650px) {
 .mainleft {
   display: none;
 }
@@ -350,6 +350,7 @@ header .logoheader {
 .right .graycontainer {
   flex-direction: column;
   padding: 1rem;
+  background-color: white;
 }
 
 .right {
@@ -375,18 +376,18 @@ header .logoheader {
 
 .learning {
   background-color: #dcdcdc; /*gainsboro*/
-  padding: 2rem 1rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.learning h2 {
+.learning .start {
   font-family: arial;
   font-size: 2rem;
   font-weight: 800;
-  margin: 2rem 0 1rem 0;
+  margin: 2rem;
   text-align: center;
   width: 100%;
 }
@@ -394,19 +395,18 @@ header .logoheader {
 .learning .row {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .learningcontainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: flex-start;
+  align-items: center;
   width: 30%;
-  height: 22rem;
+  height: 23rem;
   background-color: white;
   margin: 0 .75rem;
-  padding: 0 auto 1.5rem 3.5rem;
 }
 
 .learningcontainer img {
@@ -415,12 +415,12 @@ header .logoheader {
 }
 
 .row .learningtext {
-  padding: 1rem 1.5rem;
-  width: auto;
-  height: 100%;
+  margin: 1rem 3rem 1.5rem 1rem;
+  width: 80%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: baseline;
 }
 
@@ -443,7 +443,7 @@ header .logoheader {
 }
 
 
-@media only screen and (max-width:450px) {
+@media only screen and (max-width:650px) {
   .learning {
     background-color: white;
   }
@@ -464,8 +464,7 @@ header .logoheader {
     align-items: center;
     width: auto;
     padding: 1.5rem .5rem;
-    border: 2px solid black;
-}
+  }
 
   .mobileonly a {
     font-family: arial;
@@ -473,7 +472,7 @@ header .logoheader {
     font-weight: 600;
     text-align: left;
     text-decoration: none;
-    background-color: #c0c0c0; /*silver*/
+    background-color: #dcdcdc; /*gainsboro*/
     height: 3rem;
     width: 85%;
     margin: .5rem 0;
@@ -541,7 +540,7 @@ header .logoheader {
   display: none;
 }
 
-@media only screen and (max-width:450px) {
+@media only screen and (max-width:650px) {
   .exhibit h2 {
     font-size: 1.75rem;
   }
@@ -608,7 +607,7 @@ header .logoheader {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 650px) {
   .bottom {
     height: 3rem;
     padding: 0 1.5rem;
