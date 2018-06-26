@@ -1,6 +1,5 @@
 html {
   font-size: 16px;
-  font-family: "helvetica", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,34 +9,7 @@ html {
 
 body {
   max-width: 1250px;
-  }
-
-h1 {
-  font-size: 2rem;
-  line-height: 2.5rem;
 }
-
-h2 {
-  font-family: arial;
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-h3 {
-  font-family: Helvetica, sans-serif;
-  font-size: 3.5rem;
-}
-
-h4 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-p, a {
-  font-size: 2rem;
-  color: black;
-}
-
 
 header {
   height: 4rem;
@@ -237,15 +209,19 @@ header .logoheader {
 }
 
 .mainleft h2 {
-  font-family: arial;
+  font-family: verdana;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 1.5rem;
+  border: 2px solid black;
 }
 
 .mainleft p {
-  font-family: inherit;
+  font-family: verdana;
   font-size: 1rem;
+  font-weight: lighter;
+  line-height: 1.2rem;
+  word-spacing: ;
   margin-bottom: 2rem;
 }
 
