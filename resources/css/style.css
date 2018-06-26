@@ -6,9 +6,9 @@ html {
   align-items: center;
 }
 
-
 body {
   max-width: 1250px;
+  font-family: helvetica,sans-serif;
 }
 
 header {
@@ -124,12 +124,14 @@ header .logoheader {
 .banner .textbanner h1 {
   font-family: helvetica;
   font-size: 2.5rem;
+  line-height: 3rem;
   font-weight: bolder;
 }
 
 .banner .textbanner h4 {
   font-family: helvetica;
   font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: bold;
   margin: 2rem 0;
 }
@@ -138,10 +140,11 @@ header .logoheader {
   padding: .5rem 0;
   background-color: #696969; /*dimgray*/
   color: white;
-  font-size: 1.5rem;
+  font-family: helvetica;
+  font-size: 1.2rem;
   text-decoration: none;
   width: 20rem;
-  height: auto;
+  line-height: 2rem;
   text-align: center;
 }
 
@@ -175,8 +178,7 @@ header .logoheader {
   }
 }
 
-
-/*main section*/
+/*section main */
 
 .main {
   width: 100%;
@@ -213,13 +215,12 @@ header .logoheader {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  border: 2px solid black;
 }
 
 .mainleft p {
-  font-family: verdana;
+  font-family: helvetica;
   font-size: 1rem;
-  font-weight: lighter;
+  font-weight: 100;
   line-height: 1.2rem;
   word-spacing: ;
   margin-bottom: 2rem;
@@ -231,11 +232,8 @@ header .logoheader {
   font-size: 1rem;
 }
 
-
-
-
 .right {
-  width: 40%;
+  width: 38%;
   height: auto;
   padding: 0;
   display: flex;
@@ -254,8 +252,8 @@ header .logoheader {
 }
 
 .rightcontainer .desktop {
-  width: 35%;
-  height: 90%;
+  width: 40%;
+  height: 80%;
 }
 
 .rightcontainer .mobile {
@@ -270,9 +268,8 @@ header .logoheader {
 }
 
 .graycontainer .desktop {
-  width: 35%;
+  width: 40%;
   height: 90%;
-  /*margin: 1rem;*/
 }
 
 .graycontainer .mobile {
@@ -290,37 +287,42 @@ header .logoheader {
 
 .right h4 {
   margin: 1rem 0 1rem 0;
-  font-size: 1.25rem;
   font-family: arial;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
 .right p {
-  font-size: .85rem;
   font-family: helvetica;
+  font-size: 1rem;
 }
 
 .right a {
-  font-size: .85rem;
+  font-size: 1rem;
   font-family: helvetica;
   color: blue;
   text-decoration: none;
   margin-top: 1rem;
 }
 
-.right a:hover {
-  color: #ff0000;
+.right a:visited {
+  color: #800080;
 }
 
 @media only screen and (max-width:650px) {
+
 .mainleft {
   display: none;
-}
+  }
 
 .right .rightcontainer {
   flex-direction: column;
   align-items: baseline;
   padding: 1rem;
+}
+
+#specialmargin {
+    border: none;
 }
 
 .right .graycontainer {
@@ -346,10 +348,9 @@ header .logoheader {
   }
 .right .righttext {
   width: 90%;
+  }
 }
-}
-
-
+      /*Section learning*/
 .learning {
   background-color: #dcdcdc; /*gainsboro*/
   padding: 0;
@@ -359,13 +360,13 @@ header .logoheader {
   align-items: center;
 }
 
-.learning .start {
+.learning .start h2 {
   font-family: arial;
   font-size: 2rem;
   font-weight: 800;
   margin: 2rem;
   text-align: center;
-  width: 100%;
+  width: auto;
 }
 
 .learning .row {
@@ -401,16 +402,18 @@ header .logoheader {
 }
 
 .row h4 strong {
-  font-size: 1.25rem;
-  font-family: arial, sans-serif;
+  font-size: 1.5rem;
+  font-family: arial;
   font-weight: bold;
 }
 
 .row h4 {
+  font-family: helvetica;
   margin: .5rem 0;
 }
 
 .row p {
+  font-family: helvetica;
   line-height: 1.5rem;
 }
 
@@ -418,51 +421,59 @@ header .logoheader {
   display: none;
 }
 
-
 @media only screen and (max-width:650px) {
   .learning {
-    background-color: white;
-  }
-
-  .learning h2 {
-    font-size: 1.75rem;
-    margin: 0;
-  }
-
-  .learning .row {
     display: none;
   }
 
   .mobileonly {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: auto;
-    padding: 1.5rem .5rem;
+    margin-top: 2rem;
   }
 
-  .mobileonly a {
+  .mobileonly h2 {
+    font-family: arial;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .mobileonly ul {
+    width: 90%;
+  }
+
+  .mobileonly li {
+    width: auto;
+    background-color: #dcdcdc; /*gainsboro*/
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+
+  .mobileonly li a {
     font-family: arial;
     font-size: 1.5rem;
     font-weight: 600;
+    line-height: 2.5rem;
+    color: black;
     text-align: left;
     text-decoration: none;
-    background-color: #dcdcdc; /*gainsboro*/
-    height: 3rem;
-    width: 85%;
-    margin: .5rem 0;
-    padding: 1rem;
+  }
+
+  .mobileonly li a:hover {
+    color: #800080;
   }
 }
-  /*Exhibit Section*/
 
+  /*Exhibit Section*/
 .exhibit {
   background-color: white;
   width: 100%;
   height: auto;
 }
-
 
 .exhibit h2 {
   font-family: arial;
@@ -473,6 +484,7 @@ header .logoheader {
   width: auto;
   text-align: center;
 }
+
 .exhibitcontainer {
   width: 100%;
   height: auto;
@@ -507,7 +519,7 @@ header .logoheader {
 
 .videocontainer p {
   font-family: helvetica;
-  font-size: .85rem;
+  font-size: 1rem;
   line-height: 1.2rem;
   margin-bottom: 2rem;
 }
@@ -541,9 +553,6 @@ header .logoheader {
   }
 }
 
-.rightcontainer, .graycontainer {
-  }
-
 .rightcontainer img, .graycontainer img  {
   width: 35%;
   height: auto;
@@ -572,14 +581,12 @@ header .logoheader {
 .bottom p {
   font-family: helvetica;
   font-size: .85rem;
-
-  /*border: 1px solid black;*/
 }
 
 .bottom span a {
   font-family: helvetica;
   font-size: .85rem;
-  /*border: 1px solid black;*/
+  color: black;
   text-decoration: none;
 }
 
@@ -588,9 +595,11 @@ header .logoheader {
     height: 3rem;
     padding: 0 1.5rem;
   }
+
   .bottom p {
     margin: 1rem 0;
   }
+
   .bottom span {
     display: none;
   }
